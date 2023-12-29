@@ -1,7 +1,7 @@
 # project files and directories
 node_modules
-package.json
-package-lock.json
+commands.txt
+CACHE
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
