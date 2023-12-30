@@ -44,8 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'compressor',
     'dashboard',
-    'calendar_',
-    'user_management'
+    'user_management',
+    '_calendar.apps.CalendarConfig'
 ]
 
 MIDDLEWARE = [
@@ -82,16 +82,16 @@ WSGI_APPLICATION = 'hub_web_app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-#DATABASES = {
-#    'default': {
-#        "ENGINE": "django.db.backends.postgresql",
-#        "NAME": os.getenv('NAME'),
-#        "USER": "pi",
-#        "PASSWORD": os.getenv('PASSWORD'),
-#        "HOST": os.getenv('HOST'),
-#        "PORT": os.getenv('PORT'),
-#    }
-#}
+DATABASES = {
+    'default': {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": os.getenv('NAME'),
+        "USER": "pi",
+        "PASSWORD": os.getenv('PASSWORD'),
+        "HOST": os.getenv('HOST'),
+        "PORT": os.getenv('PORT'),
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
