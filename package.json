@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "dev": "npx tailwindcss -i hub_web_app/static/src/input.css -o ./hub_web_app/static/src/output.css --watch",
+    "build": "npx tailwindcss -i hub_web_app/static/src/input.css -o ./hub_web_app/static/src/output.css -m"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "flowbite": "^2.3.0",
+    "package.json": "^2.0.1"
+  }
+}

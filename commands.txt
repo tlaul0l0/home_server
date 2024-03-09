@@ -1,0 +1,55 @@
+### DJANGO ###
+# run django app on development server
+python manage.py runserver <port(optional, default is 8000)>
+
+# create new app in project
+python manage.py startapp <name>
+
+### Seed Table ###
+# start django shell and create objects in there
+python manage.py shell
+
+# dump date to json file
+python3 manage.py dumpdata <app>.<model> --indent 4 > <path_to_json>.json
+
+# remove date from shell
+python manage.py shell
+<Model>.objects.all().delete()
+
+# seed date after running migrate
+python3 manage.py loaddata <path_to_json>.json
+python manage.py loaddata _calendar/seeds/0001_year.json _calendar/seeds/0002_month.json _calendar/seeds/0003_day.json 
+
+
+### TAILWIND ###
+# generate css
+npm run dev
+
+
+### DOCKER ###
+# create docker container
+docker run --name <name> -e POSTGRES_PASSWORD=<> -d <build>
+
+# connect to docker container
+sudo docker exec -it <name> /bin/sh
+
+# run psql inside when connected to container
+psql --username postgres
+
+# list all databases in psql
+\l
+
+# quit psql
+\q
+
+# show all running docker containers
+sudo docker compose ps
+
+# run docker from yaml file
+sudo docker compose up
+
+# stop all docker containers
+sudo docker compose down
+
+# show all docker processes
+sudo lsof -i -P -n | grep 5432
