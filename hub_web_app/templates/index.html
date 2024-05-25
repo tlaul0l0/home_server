@@ -4,27 +4,69 @@
 
 {% block content %}
 
-<div class="px-4 pt-6">
-    <div class="grid gap-4 xl:grid-cols-2 2xl:grid-cols-3">
-      <!-- Main widget -->
-      <div class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800">
-        <div class="flex items-center justify-between mb-4">
-          <div class="flex-shrink-0">
-            <h3 class="text-base font-light text-gray-500 dark:text-gray-400">Raumtemperatur</h3>
-          </div>
+    <div class="p-4">
+        <div
+            class="flex flex-col gap-4">
+            <!--CONTENT 1-->
+            <div class="w-128 flex-auto border-x border-y border-gray-200 hover:bg-gray-200 rounded-2xl">
+                <div
+                    id="animation-carousel" class="relative w-full" data-carousel="static">
+                    <!-- Carousel wrapper -->
+                    <div
+                        class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                        <!-- Item 1 -->
+                        <div class="hidden duration-200 ease-linear" data-carousel-item="data-carousel-item">
+                            <img src="" class="absolute left-1/2 top-1/2 block w-full -translate-x-1/2 -translate-y-1/2" alt="..."/>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="hidden duration-200 ease-linear" data-carousel-item="data-carousel-item">
+                            <img src="" class="absolute left-1/2 top-1/2 block w-full -translate-x-1/2 -translate-y-1/2" alt="+++"/>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="hidden duration-200 ease-linear" data-carousel-item="active">
+                            <img src="" class="absolute left-1/2 top-1/2 block w-full -translate-x-1/2 -translate-y-1/2" alt="---"/>
+                        </div>
+                        <!-- Item 4 -->
+                        <div class="hidden duration-200 ease-linear" data-carousel-item="data-carousel-item">
+                            <img src="" class="absolute left-1/2 top-1/2 block w-full -translate-x-1/2 -translate-y-1/2" alt="000"/>
+                        </div>
+                        <!-- Item 5 -->
+                        <div class="hidden duration-200 ease-linear" data-carousel-item="data-carousel-item">
+                            <img src="" class="absolute left-1/2 top-1/2 block w-full -translate-x-1/2 -translate-y-1/2" alt="111"/>
+                        </div>
+                        <!-- Item 6 -->
+                        <div class="hidden duration-200 ease-linear" data-carousel-item="data-carousel-item">
+                            <img src="" class="absolute left-1/2 top-1/2 block w-full -translate-x-1/2 -translate-y-1/2" alt="666"/>
+                        </div>
+                        <!-- Item 7 -->
+                        <div class="hidden duration-200 ease-linear" data-carousel-item="data-carousel-item">
+                            <img src="" class="absolute left-1/2 top-1/2 block w-full -translate-x-1/2 -translate-y-1/2" alt="!!!"/>
+                        </div>
+                    </div>
+                    <!-- Slider controls -->
+                    <button type="button" class="group absolute start-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none" data-carousel-prev="data-carousel-prev">
+                        <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70">
+                            <svg class="h-4 w-4 text-white rtl:rotate-180 dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                            </svg>
+                            <span class="sr-only">Previous</span>
+                        </span>
+                    </button>
+                    <button type="button" class="group absolute end-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none" data-carousel-next="data-carousel-next">
+                        <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70">
+                            <svg class="h-4 w-4 text-white rtl:rotate-180 dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                            </svg>
+                            <span class="sr-only">Next</span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <!--CONTENT 2-->
+            <div class="w-64 flex-auto border-x border-y border-gray-200 hover:bg-gray-200 rounded-2xl">
+                <h1 class="text-2xl font-bold">Welcome to my dashboard2!</h1>
+                <p class="mt-2 text-gray-600">This is an example dashboard using Tailwind CSS.</p>
+            </div>
         </div>
-        <div id="main-chart"></div>
-        <!-- Card Footer -->
-        <div class="flex items-center justify-between pt-3 mt-4 border-t border-gray-200 sm:pt-6 dark:border-gray-700">
-          <div class="flex-shrink-0">
-            <a href="#" class="inline-flex items-center p-2 text-xs font-medium uppercase rounded-lg text-primary-700 sm:text-sm hover:bg-gray-100 dark:text-primary-500 dark:hover:bg-gray-700">
-            </a>
-          </div>
-        </div>
-      </div>
-      <!--Tabs widget -->
-      <div class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 sm:p-6 dark:bg-gray-800">
-        <h3 class="flex items-center mb-4 text-lg font-semibold text-gray-900 dark:text-white">Wetter in Salem</h3>
-      </div>
-</div>
+    </div>
 {% endblock content %}

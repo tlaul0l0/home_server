@@ -6,37 +6,39 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hub</title>
+    <head>
+        <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Hub</title>
 
-    {% compress css %}
-    <link rel="stylesheet" href="{% static 'src/output.css' %}">
-    {% endcompress %}
+                    {% compress css %}
+                    <link rel="stylesheet" href="{% static 'src/output.css' %}">
+                        {% endcompress %}
 
-</head>
+                    </head>
 
-    {% block navbar %}
-      {% include "navbar.html" %}
-    {% endblock navbar %}
+                    <div class="flex h-screen bg-gray-100">
+                        {% block sidebar %}
+                            {% include "sidebar.html" %}
+                        {% endblock sidebar %}
+                        <div class="flex h-screen flex-1 flex-col overflow-y-auto">
 
-    {% block sidebar %}
-      {% include "sidebar.html" %}
-    {% endblock sidebar %}
+                            {% block navbar %}
+                                {% include "navbar.html" %}
+                            {% endblock navbar %}
 
 
-    <div class="container mx-auto mt-4">
-        {% block content %}
-        {% endblock content %}
-    </div>
+                            {% block content %}{% endblock content %}
+                        </div>
 
-    {% block footer %}
-      {% include "footer.html" %}
-    {% endblock footer %}
+                        <!--{% block footer %}-->
+                    <!--  {% include "footer.html" %}-->
+                        <!--{% endblock footer %}-->
+                    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-</body>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+                </body>
 
-</html>
+            </html>
+
