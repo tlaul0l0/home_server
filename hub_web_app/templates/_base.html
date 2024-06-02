@@ -19,17 +19,23 @@
                     </head>
 
                     <div class="flex h-screen bg-gray-100">
+                        <!-- SIDEBAR START -->
                         {% block sidebar %}
                             {% include "sidebar.html" %}
                         {% endblock sidebar %}
+                        <!-- SIDEBAR END -->
+
                         <div class="flex h-screen flex-1 flex-col overflow-y-auto">
 
+                            <!-- NAVBAR START -->
                             {% block navbar %}
                                 {% include "navbar.html" %}
                             {% endblock navbar %}
+                            <!-- NAVBAR END -->
 
-
+                            <!-- CONTENT START -->
                             {% block content %}{% endblock content %}
+                            <!-- CONTENT END -->
                         </div>
 
                         <!--{% block footer %}-->
